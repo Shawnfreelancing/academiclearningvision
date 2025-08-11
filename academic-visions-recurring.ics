@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Academic Visions//EN
+CALSCALE:GREGORIAN
+
+BEGIN:VEVENT
+UID:daily-001@academic-visions.netlify.app
+DTSTAMP:20250625T150000Z
+DTSTART:20250701T140000Z
+DTEND:20250701T143000Z
+SUMMARY:Daily Academic Check-In
+DESCRIPTION:Reflect, review, and reset for success. Zoom Link: https://zoom.us/j/1234567890
+LOCATION:Online via Zoom
+RRULE:FREQ=DAILY;COUNT=365
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:weekly-001@academic-visions.netlify.app
+DTSTAMP:20250625T150000Z
+DTSTART:20250703T150000Z
+DTEND:20250703T160000Z
+SUMMARY:Weekly Faculty Collaboration
+DESCRIPTION:Weekly session to support faculty with tech integration and pedagogy. Join via Zoom: https://zoom.us/j/1234567890
+LOCATION:Online via Zoom
+RRULE:FREQ=WEEKLY;COUNT=52
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:monthly-001@academic-visions.netlify.app
+DTSTAMP:20250625T150000Z
+DTSTART:20250701T160000Z
+DTEND:20250701T170000Z
+SUMMARY:Monthly Strategic Vision Meeting
+DESCRIPTION:Review institutional goals and align strategies for academic transformation. Zoom: https://zoom.us/j/1234567890
+LOCATION:Online via Zoom
+RRULE:FREQ=MONTHLY;COUNT=12
+STATUS:CONFIRMED
+END:VEVENT
+
+END:VCALENDAR
