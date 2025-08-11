@@ -1,0 +1,275 @@
+:root {
+  --primary-color: #3b65c4;
+  --gold-color: #ffd700;
+  --silver-color: #c0c0c0;
+  --bronze-color: #cd7f32;
+}
+
+/* ============================
+🎖️ Standards Section Styling
+============================ */
+
+.standards-section {
+  background: linear-gradient(135deg, #f0f4f8, #dbe8fa);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #14213d;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #5a5a5a;
+  margin-bottom: 60px;
+  font-weight: 500;
+}
+
+.standards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* 🚀 Card Base Styles */
+.standard-card {
+  background: #ffffff;
+  padding: 32px 26px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 320px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e0e6ef;
+
+  /* Entry Animation Setup */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
+}
+
+/* 🪄 When card is visible */
+.standard-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🖱️ Hover Pop-Up + 3D Effect */
+.standard-card:hover {
+  transform: perspective(800px) rotateX(1.5deg) rotateY(1.5deg) scale(1.02);
+}
+
+/* ✨ Animated Gradient Shine */
+.standard-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+.standard-card:hover::after {
+  left: 100%;
+  transition: all 1.2s ease-in-out;
+}
+
+/* 💫 Hover Glow by Tier */
+.standard-card.gold:hover {
+  box-shadow: 0 18px 45px rgba(255, 215, 0, 0.4);
+}
+.standard-card.silver:hover {
+  box-shadow: 0 18px 45px rgba(192, 192, 192, 0.35);
+}
+.standard-card.bronze:hover {
+  box-shadow: 0 18px 45px rgba(205, 127, 50, 0.35);
+}
+
+/* Floating Badge */
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 26px;
+  z-index: 2;
+}
+.gold .badge { color: var(--gold-color); }
+.silver .badge { color: var(--silver-color); }
+.bronze .badge { color: var(--bronze-color); }
+
+/* Card Header + Text */
+.standard-card h3 {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  color: #121212;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.3px;
+}
+
+.tier-label {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.standard-card p {
+  font-size: 16px;
+  margin-bottom: 22px;
+  color: #333;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+/* 🔘 Stylish Bullet List */
+.standard-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.standard-card ul li {
+  font-size: 15.5px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ececec;
+  color: #2b2b2b;
+  position: relative;
+  padding-left: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideFadeIn 0.4s ease forwards;
+}
+
+.standard-card.visible ul li:nth-child(1) { animation-delay: 0.3s; }
+.standard-card.visible ul li:nth-child(2) { animation-delay: 0.4s; }
+.standard-card.visible ul li:nth-child(3) { animation-delay: 0.5s; }
+.standard-card.visible ul li:nth-child(4) { animation-delay: 0.6s; }
+
+.standard-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.toggle-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toggle-item {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.toggle-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.toggle-header:hover {
+  color: var(--primary-color, #3b65c4);
+}
+
+.toggle-content {
+  display: none;
+  font-size: 0.95rem;
+  color: #555;
+  padding: 6px 0 10px;
+}
+
+.toggle-item.active .toggle-content {
+  display: block;
+}
+
+.toggle-item.active .arrow {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+/* 🎖️ Tier Color Backgrounds */
+.standard-card.gold {
+  border-top: 6px solid var(--gold-color);
+  background: linear-gradient(to bottom, #fffbe6, #fff3b0);
+}
+
+.standard-card.silver {
+  border-top: 6px solid var(--silver-color);
+  background: linear-gradient(to bottom, #f7f7f7, #e6e6e6);
+}
+
+.standard-card.bronze {
+  border-top: 6px solid var(--bronze-color);
+  background: linear-gradient(to bottom, #fff4e6, #ffd6a5);
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 992px) {
+  .standard-card {
+    max-width: 47%;
+  }
+}
+
+@media (max-width: 768px) {
+  .standards-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .standard-card {
+    max-width: 90%;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* CTA Button */
+.standards-cta-btn {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 14px 32px;
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.standards-cta-btn:hover {
+  background: #2d4fb2;
+  transform: translateY(-2px);
+}

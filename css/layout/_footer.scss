@@ -1,0 +1,147 @@
+@use '../abstracts/variables';
+.site-footer {
+  background: #3f66e0;
+  color: white;
+  padding: 60px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 400px;
+}
+
+.footer-left h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.footer-left blockquote {
+  font-style: italic;
+  margin: 0 0 16px;
+}
+
+.footer-left p {
+  margin: 10px 0;
+}
+
+.footer-cta {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 20px;
+  font-size: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-right p {
+  margin-bottom: 12px;
+}
+
+.footer-right input {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+}
+
+.footer-right button {
+  margin-top: 12px;
+  padding: 12px;
+  background: #0d0f2b;
+  border: none;
+  color: white;
+  border-radius: 999px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-right button:hover {
+  background: #1e2656;
+}
+.search-feature {
+  position: relative;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.search-feature input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 999;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px;
+}
+
+.search-result-item {
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-result-item:hover,
+.search-result-item.active {
+  background-color: #f0f4ff;
+}
+
+
+.no-result {
+  padding: 12px;
+  color: #888;
+}
+.company {
+  color: white !important;
+  
+}
+
+.font-size{
+font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container,
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

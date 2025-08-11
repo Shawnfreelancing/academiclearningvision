@@ -1,0 +1,221 @@
+:root {
+  --primary-blue: #3f66e0;
+  --light-blue-bg: #eef4ff;
+  --dark-text: #1a1a1a;
+  --soft-text: #444;
+  --bg-light: #f9fafc;
+  --radius: 16px;
+  --shadow-light: 0 6px 16px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s ease;
+}
+
+/* ============================
+🏫 Academic About Section
+============================ */
+
+.academic-about-section {
+  background: var(--bg-light);
+  padding: 100px 24px;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeSlideUp 0.8s ease-out;
+}
+
+.academic-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================
+📌 Section Headings
+============================ */
+
+.academic-about-heading {
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--dark-text);
+}
+
+.academic-about-subheading {
+  font-size: 24px;
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin: 40px 0 24px;
+  text-align: center;
+  line-height: 1.4;
+  position: relative;
+}
+
+.academic-about-subheading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-blue);
+  margin: 12px auto 0;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+/* ============================
+📖 Paragraph Content
+============================ */
+
+.academic-about-history p,
+.academic-about-culture p {
+  font-size: 17px;
+  color: var(--soft-text);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================
+💡 Highlight Block
+============================ */
+
+.academic-about-highlight {
+  font-weight: 600;
+  color: #222;
+  background: var(--light-blue-bg);
+  padding: 20px 24px;
+  border-left: 5px solid var(--primary-blue);
+  border-radius: var(--radius);
+  margin: 36px auto 0;
+  max-width: 900px;
+  box-shadow: var(--shadow-light);
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+/* ============================
+👥 Team Grid
+============================ */
+
+.academic-about-team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 64px;
+}
+
+/* ============================
+📇 Team Cards
+============================ */
+
+.academic-team-card {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, box-shadow;
+}
+
+.academic-team-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.academic-team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* 🖼️ Avatar Image */
+.academic-team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  border: 4px solid var(--primary-blue);
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(63, 102, 224, 0.2);
+}
+
+.academic-team-card:hover img {
+  box-shadow: 0 6px 20px rgba(63, 102, 224, 0.35);
+}
+
+/* 🧑 Name + Role */
+.academic-team-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.academic-team-card:hover h4 {
+  color: var(--primary-blue);
+}
+
+.academic-team-card p {
+  font-size: 14.5px;
+  color: #666;
+}
+
+/* ============================
+📱 Responsive Adjustments
+============================ */
+
+@media (max-width: 768px) {
+  .academic-about-heading {
+    font-size: 30px;
+  }
+
+  .academic-about-subheading {
+    font-size: 20px;
+  }
+
+  .academic-team-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .academic-about-highlight {
+    font-size: 15.5px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .academic-about-highlight {
+    font-size: 14.5px;
+    padding: 16px;
+  }
+
+  .academic-team-card {
+    padding: 24px 16px;
+  }
+
+  .academic-team-card p {
+    font-size: 13.5px;
+  }
+}
+
+/* ============================
+💫 Animations
+============================ */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,138 @@
+:root {
+  --primary-blue: #3f66e0;
+  --blue-bg: #f8fbff;
+  --text-dark: #1a1a1a;
+  --text-muted: #555;
+  --text-soft: #444;
+  --radius-md: 12px;
+  --shadow-light: 0 6px 16px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+/* ============================
+📘 Advisory Section
+============================ */
+
+.academic-advisory-section {
+  background: #fff;
+  padding: 100px 24px;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeSlideUp 0.8s ease-out;
+}
+
+.academic-advisory-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================
+📌 Section Title & Intro
+============================ */
+
+.academic-advisory-heading {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.academic-advisory-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-blue);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.academic-advisory-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ============================
+📋 Advisory Cards Grid
+============================ */
+
+.academic-advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.academic-advisory-card {
+  background: var(--blue-bg);
+  border-left: 6px solid var(--primary-blue);
+  padding: 28px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, box-shadow, opacity;
+}
+
+.academic-advisory-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.academic-advisory-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.academic-advisory-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.academic-advisory-card:hover h3 {
+  color: var(--primary-blue);
+}
+
+.academic-advisory-card p {
+  font-size: 15.5px;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* ============================
+📱 Responsive
+============================ */
+
+@media (max-width: 768px) {
+  .academic-advisory-heading {
+    font-size: 30px;
+  }
+
+  .academic-advisory-intro {
+    font-size: 16px;
+  }
+}
+
+/* ============================
+💫 Fade Slide Up Animation
+============================ */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

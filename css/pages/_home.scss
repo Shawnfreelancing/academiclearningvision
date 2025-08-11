@@ -1,0 +1,491 @@
+/* Survey */
+
+.survey-banner {
+  background: linear-gradient(to right, #6a82fb, #a18cd1);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.05);
+}
+
+.survey-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.survey-content h2 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.survey-content h2 span {
+  color: #ffd54f;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.survey-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.survey-btn {
+  background: #ffffff;
+  color: #333;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.survey-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background-color: #f4f4f4;
+}
+
+.survey-btn.disabled {
+  background: #cccccc;
+  color: #666;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.qr-note {
+  font-size: 15px;
+  color: #f0f0f0;
+  opacity: 0.85;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .survey-content h2 {
+    font-size: 24px;
+  }
+
+  .survey-btn {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+/* innovation */
+.innovation-section {
+  background: #0d0f2b;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.innovation-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.innovation-content h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.innovation-content h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffd54f;
+  margin-bottom: 20px;
+}
+
+.innovation-content p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 300px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffeb3b;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-card {
+    width: 100%;
+  }
+
+  .innovation-content h2 {
+    font-size: 28px;
+  }
+
+  .innovation-content h3 {
+    font-size: 18px;
+  }
+}
+/* edu-section */
+.edu-section {
+  background: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.edu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.edu-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.edu-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.edu-text {
+  flex: 1 1 450px;
+}
+
+.edu-text h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.edu-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.edu-images {
+  flex: 1 1 450px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.edu-images img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✅ Override for .image-3 specifically */
+.edu-images img.image-3 {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border: 2px solid red;
+}
+
+/* Hover effect */
+.edu-images img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .edu-block,
+  .edu-block.reverse {
+    flex-direction: column;
+  }
+
+  .edu-images {
+    justify-content: center;
+  }
+
+  /* Optional: make image-3 scale down on smaller screens */
+  .edu-images img.image-3 {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+/* Success */
+.success-section {
+  background: #f3f6fa;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.success-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.success-container h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.success-container .subtitle {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.success-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.success-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.success-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.success-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.success-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2e3a59;
+}
+
+.success-card p {
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .success-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .success-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+// _contact.scss
+.contact-section {
+  background: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1 1 400px;
+}
+
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  gap: 40px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-details a {
+  color: #0056cc;
+  text-decoration: none;
+}
+
+.search-feature label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.search-feature input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.contact-form button {
+  padding: 14px;
+  border: none;
+  background: #0d0f2b;
+  color: white;
+  font-weight: bold;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #1e2656;
+}
+.deck-stack {
+  position: relative;
+  width: min(90vw, 320px);
+  height: calc(min(90vw, 320px) * 1.4); /* Card ratio: 2.5"x3.5" */
+transform: translateX(170px);
+  border-radius: 12px;
+  perspective: 1000px;
+  cursor: pointer;
+  touch-action: manipulation; /* improves tap responsiveness */
+}
+
+.deck-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(0) scale(1);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.deck-card.active {
+  opacity: 1;
+  z-index: 3;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.deck-card.next {
+  opacity: 0.9;
+  z-index: 2;
+  transform: translateY(6%) scale(0.96); /* subtle peek */
+}
+
+.deck-card.exit {
+  transform: translateX(-120%) rotate(-6deg);
+  opacity: 0;
+  z-index: 1;
+}
+.deck-card.active:hover {
+  transform: translateY(-5%) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+
+/* ✅ Mobile tuning */
+@media (max-width: 430px) {
+  .deck-stack {
+    width: 90vw; /* slightly smaller for balance */
+    height: calc(90vw * 1.4); /* maintains card ratio */
+    margin: 1.5rem auto; /* ✅ less vertical space, still centered */
+     background: pink;
+  }
+
+  .deck-card.next {
+    transform: translateY(5%) scale(0.95);
+  }
+
+  .deck-card.exit {
+    transform: translateX(-100%) rotate(-4deg);
+  }
+}
