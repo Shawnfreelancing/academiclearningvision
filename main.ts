@@ -325,3 +325,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //data.html ts 
+//contact footer
+// main.ts
+const ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbysJ3ebGgKWlgxjeuG4yU8eSAIhR7k2gjN7nbEIwqf6oQw5B-fGo25_YE2G-8ooTLc/exec";
+
+const form = document.getElementById("contactForm") as HTMLFormElement;
+const statusEl = document.getElementById("formStatus") as HTMLParagraphElement;
+
+form.addEventListener("submit", async (e: SubmitEvent) => {
+  e.preventDefault();
+  statusEl.textContent = "Sending...";
+
+  const body = new URLSearchParams({
+    name: (form.elements.namedItem("name") as HTMLInputElement)?.value || "",
+    email: (form.elements.namedItem("email") as HTMLInputElement)?.value || "",
+    message: (form.elements.namedItem("message") as HTMLTextAreaElement)?.value || ""
+  });
+
+  try {
+    // no-cors avoids browser CORS blocks; response is opaque
+    await fetch(ENDPOINT, { method: "POST", body, mode: "no-cors" });
+    statusEl.textContent = "✅ Thanks! Your message was received.";
+    form.reset();
+  } catch {
+    statusEl.textContent = "⚠️ Network error.";
+  }
+});

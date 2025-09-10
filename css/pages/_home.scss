@@ -1,5 +1,4 @@
 /* Survey */
-
 .survey-banner {
   background: linear-gradient(to right, #6a82fb, #a18cd1);
   color: #fff;
@@ -82,6 +81,7 @@
     padding: 12px 20px;
   }
 }
+
 /* innovation */
 .innovation-section {
   background: #0d0f2b;
@@ -165,6 +165,7 @@
     font-size: 18px;
   }
 }
+
 /* edu-section */
 .edu-section {
   background: #f9f9f9;
@@ -257,6 +258,7 @@
     width: 100%;
   }
 }
+
 /* Success */
 .success-section {
   background: #f3f6fa;
@@ -338,7 +340,8 @@
     max-width: 90%;
   }
 }
-// _contact.scss
+
+/* contact */
 .contact-section {
   background: #f9f9f9;
   padding: 80px 20px;
@@ -420,11 +423,13 @@
 .contact-form button:hover {
   background: #1e2656;
 }
+
+/* deck */
 .deck-stack {
   position: relative;
   width: min(90vw, 320px);
   height: calc(min(90vw, 320px) * 1.4); /* Card ratio: 2.5"x3.5" */
-transform: translateX(170px);
+  transform: translateX(170px);
   border-radius: 12px;
   perspective: 1000px;
   cursor: pointer;
@@ -464,6 +469,7 @@ transform: translateX(170px);
   opacity: 0;
   z-index: 1;
 }
+
 .deck-card.active:hover {
   transform: translateY(-5%) scale(1.05);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
@@ -471,14 +477,13 @@ transform: translateX(170px);
   cursor: pointer;
 }
 
-
 /* ✅ Mobile tuning */
 @media (max-width: 430px) {
   .deck-stack {
     width: 90vw; /* slightly smaller for balance */
     height: calc(90vw * 1.4); /* maintains card ratio */
     margin: 1.5rem auto; /* ✅ less vertical space, still centered */
-     background: pink;
+    background: pink;
   }
 
   .deck-card.next {
@@ -488,4 +493,18 @@ transform: translateX(170px);
   .deck-card.exit {
     transform: translateX(-100%) rotate(-4deg);
   }
+}
+
+/* === FIX: remove vertical bar in survey heading === */
+.survey-banner .survey-content h2,
+.survey-banner .survey-content h2::before,
+.survey-banner .survey-content h2::after {
+  border-left: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding-left: 0 !important;
+}
+
+.survey-banner .survey-content {
+  border-left: 0 !important;
 }

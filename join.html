@@ -133,18 +133,19 @@
 </div>
     </div>
 
-    <form class="contact-form">
-      <label>Your First Name</label>
-      <input type="text" placeholder="Enter your first name" />
+   <form class="contact-form" id="contactForm">
+  <label>Your First Name</label>
+  <input type="text" name="name" placeholder="Enter your first name" />
 
-      <label>Your Email Address*</label>
-      <input type="email" placeholder="Enter your email address" required />
+  <label>Your Email Address*</label>
+  <input type="email" name="email" placeholder="Enter your email address" required />
 
-      <label>Your Message*</label>
-      <textarea rows="4" placeholder="Type your message here" required></textarea>
+  <label>Your Message*</label>
+  <textarea name="message" rows="4" placeholder="Type your message here" required></textarea>
 
-      <button type="submit">Submit Your Inquiry</button>
-    </form>
+  <button type="submit">Submit Your Inquiry</button>
+  <p id="formStatus" style="margin-top:8px;"></p>
+</form>
   </div>
 </section>
   <footer class="site-footer">

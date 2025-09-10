@@ -1,5 +1,15 @@
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 function toggleMenu() {
-    var navLinks = document.getElementById("navLinks");
+    const navLinks = document.getElementById("navLinks");
     if (navLinks !== null) {
         navLinks.classList.toggle("active");
     }
@@ -7,12 +17,12 @@ function toggleMenu() {
 function bookAppointment() {
     window.location.href = "/booking-page"; // replace with actual URL
 }
-document.addEventListener("DOMContentLoaded", function () {
-    var cards = document.querySelectorAll('.standard-card');
-    var observer = new IntersectionObserver(function (entries, observerInstance) {
-        entries.forEach(function (entry) {
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.standard-card');
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                var target = entry.target;
+                const target = entry.target;
                 target.classList.add('visible');
                 observerInstance.unobserve(target); // Stop observing after fade-in
             }
@@ -20,12 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }, {
         threshold: 0.1,
     });
-    cards.forEach(function (card) { return observer.observe(card); });
+    cards.forEach(card => observer.observe(card));
 });
-document.addEventListener("DOMContentLoaded", function () {
-    var blocks = document.querySelectorAll('.section-block');
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+document.addEventListener("DOMContentLoaded", () => {
+    const blocks = document.querySelectorAll('.section-block');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
@@ -34,26 +44,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }, {
         threshold: 0.15,
     });
-    blocks.forEach(function (block) { return observer.observe(block); });
+    blocks.forEach(block => observer.observe(block));
 });
-document.addEventListener("DOMContentLoaded", function () {
-    var cards = document.querySelectorAll(".academic-team-card");
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".academic-team-card");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
-    cards.forEach(function (card) { return observer.observe(card); });
+    cards.forEach(card => observer.observe(card));
 });
-document.addEventListener("DOMContentLoaded", function () {
-    var cards = document.querySelectorAll(".academic-team-card");
-    var observer = new IntersectionObserver(function (entries, observerInstance) {
-        entries.forEach(function (entry) {
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".academic-team-card");
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                var target = entry.target;
+                const target = entry.target;
                 target.classList.add("visible");
                 observerInstance.unobserve(target);
             }
@@ -61,51 +71,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }, {
         threshold: 0.1,
     });
-    cards.forEach(function (card) { return observer.observe(card); });
+    cards.forEach((card) => observer.observe(card));
 });
-document.addEventListener("DOMContentLoaded", function () {
-    var cards = document.querySelectorAll(".academic-advisory-card");
-    var observer = new IntersectionObserver(function (entries, obs) {
-        entries.forEach(function (entry) {
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".academic-advisory-card");
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
                 obs.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
-    cards.forEach(function (card) { return observer.observe(card); });
+    cards.forEach(card => observer.observe(card));
 });
-document.addEventListener("DOMContentLoaded", function () {
-    var cards = document.querySelectorAll(".academic-qsm-card");
-    var observer = new IntersectionObserver(function (entries, obs) {
-        entries.forEach(function (entry) {
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".academic-qsm-card");
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
                 obs.unobserve(entry.target);
             }
         });
     }, { threshold: 0.15 });
-    cards.forEach(function (card) { return observer.observe(card); });
+    cards.forEach(card => observer.observe(card));
 });
-document.addEventListener("DOMContentLoaded", function () {
-    var cards = document.querySelectorAll(".academic-team-card");
-    var observer = new IntersectionObserver(function (entries, obs) {
-        entries.forEach(function (entry) {
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".academic-team-card");
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
                 obs.unobserve(entry.target);
             }
         });
     }, { threshold: 0.15 });
-    cards.forEach(function (card) { return observer.observe(card); });
+    cards.forEach(card => observer.observe(card));
 });
 function toggleService(headerElement) {
-    var clickedCard = headerElement.closest('.academic-service-card');
+    const clickedCard = headerElement.closest('.academic-service-card');
     if (!clickedCard)
         return;
     // Close all other cards
-    var allCards = document.querySelectorAll('.academic-service-card');
-    allCards.forEach(function (card) {
+    const allCards = document.querySelectorAll('.academic-service-card');
+    allCards.forEach(card => {
         if (card !== clickedCard) {
             card.classList.remove('open');
         }
@@ -113,7 +123,7 @@ function toggleService(headerElement) {
     // Toggle the clicked one
     clickedCard.classList.toggle('open');
 }
-var navItems = [
+const navItems = [
     { name: "Home", href: "index.html" },
     { name: "Mission & Vision", href: "mission.html" },
     { name: "Gold Standard", href: "gold.html" },
@@ -125,34 +135,32 @@ var navItems = [
     { name: "About", href: "about.html" },
     { name: "Join Us!", href: "join.html" },
 ];
-var searchInput = document.getElementById("search");
-var searchResults = document.getElementById("search-results");
-var activeIndex = -1;
+const searchInput = document.getElementById("search");
+const searchResults = document.getElementById("search-results");
+let activeIndex = -1;
 function renderResults(query) {
     searchResults.innerHTML = "";
     activeIndex = -1;
-    var matches = navItems.filter(function (item) {
-        return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-    });
+    const matches = navItems.filter(item => item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1);
     if (matches.length === 0) {
-        searchResults.innerHTML = "<div class=\"no-result\">No pages found</div>";
+        searchResults.innerHTML = `<div class="no-result">No pages found</div>`;
         return;
     }
-    matches.forEach(function (item, index) {
-        var div = document.createElement("div");
+    matches.forEach((item, index) => {
+        const div = document.createElement("div");
         div.textContent = item.name;
         div.className = "search-result-item";
         div.setAttribute("data-href", item.href);
         div.setAttribute("data-index", index.toString());
         // ✅ Handle mouse clicks before blur
-        div.addEventListener("mousedown", function () {
+        div.addEventListener("mousedown", () => {
             window.location.href = item.href;
         });
         searchResults.appendChild(div);
     });
 }
 function updateHighlight(items) {
-    items.forEach(function (item, i) {
+    items.forEach((item, i) => {
         if (i === activeIndex) {
             item.classList.add("active");
             searchInput.value = item.textContent || "";
@@ -162,8 +170,8 @@ function updateHighlight(items) {
         }
     });
 }
-searchInput.addEventListener("input", function () {
-    var query = searchInput.value.trim();
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim();
     if (query.length > 0) {
         renderResults(query);
     }
@@ -171,8 +179,8 @@ searchInput.addEventListener("input", function () {
         searchResults.innerHTML = "";
     }
 });
-searchInput.addEventListener("keydown", function (e) {
-    var items = document.querySelectorAll(".search-result-item");
+searchInput.addEventListener("keydown", (e) => {
+    const items = document.querySelectorAll(".search-result-item");
     if (items.length === 0)
         return;
     if (e.key === "ArrowDown") {
@@ -186,31 +194,31 @@ searchInput.addEventListener("keydown", function (e) {
         e.preventDefault();
     }
     else if (e.key === "Enter" && activeIndex !== -1) {
-        var selected = items[activeIndex];
+        const selected = items[activeIndex];
         if (selected) {
-            var href = selected.getAttribute("data-href");
+            const href = selected.getAttribute("data-href");
             if (href)
                 window.location.href = href;
         }
     }
 });
 // Optional: Give a small delay before clearing to allow click to register
-searchInput.addEventListener("blur", function () {
-    setTimeout(function () {
+searchInput.addEventListener("blur", () => {
+    setTimeout(() => {
         searchResults.innerHTML = "";
     }, 150);
 });
-document.addEventListener('DOMContentLoaded', function () {
-    var accordionHeaders = document.querySelectorAll('.accordion-header');
-    accordionHeaders.forEach(function (header) {
-        header.addEventListener('click', function () {
-            var accordion = header.parentElement;
-            var content = accordion.querySelector('.accordion-content');
-            var isOpen = accordion.classList.contains('open');
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach((header) => {
+        header.addEventListener('click', () => {
+            const accordion = header.parentElement;
+            const content = accordion.querySelector('.accordion-content');
+            const isOpen = accordion.classList.contains('open');
             // Close all accordions
-            document.querySelectorAll('.accordion.open').forEach(function (openAccordion) {
+            document.querySelectorAll('.accordion.open').forEach((openAccordion) => {
                 openAccordion.classList.remove('open');
-                var openContent = openAccordion.querySelector('.accordion-content');
+                const openContent = openAccordion.querySelector('.accordion-content');
                 if (openContent) {
                     openContent.style.maxHeight = '';
                 }
@@ -227,11 +235,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-document.addEventListener("DOMContentLoaded", function () {
-    var headers = document.querySelectorAll(".toggle-header");
-    headers.forEach(function (header) {
-        header.addEventListener("click", function () {
-            var item = header.closest(".toggle-item");
+document.addEventListener("DOMContentLoaded", () => {
+    const headers = document.querySelectorAll(".toggle-header");
+    headers.forEach(header => {
+        header.addEventListener("click", () => {
+            const item = header.closest(".toggle-item");
             if (item) {
                 item.classList.toggle("active");
             }
@@ -239,18 +247,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 // deck slider
-document.addEventListener('DOMContentLoaded', function () {
-    var deck = document.getElementById('deck');
+document.addEventListener('DOMContentLoaded', () => {
+    const deck = document.getElementById('deck');
     if (!deck)
         return;
-    var cards = deck.querySelectorAll('.deck-card');
-    var currentIndex = 0;
-    var advanceCard = function () {
-        var total = cards.length;
-        var currentCard = cards[currentIndex];
-        var nextIndex = (currentIndex + 1) % total;
-        var nextCard = cards[nextIndex];
-        var futureCard = cards[(nextIndex + 1) % total];
+    const cards = deck.querySelectorAll('.deck-card');
+    let currentIndex = 0;
+    const advanceCard = () => {
+        const total = cards.length;
+        const currentCard = cards[currentIndex];
+        const nextIndex = (currentIndex + 1) % total;
+        const nextCard = cards[nextIndex];
+        const futureCard = cards[(nextIndex + 1) % total];
         // Animate current out
         currentCard.classList.remove('active');
         currentCard.classList.add('exit');
@@ -260,45 +268,41 @@ document.addEventListener('DOMContentLoaded', function () {
         // Setup future peek card
         futureCard.classList.add('next');
         // Cleanup after animation
-        setTimeout(function () {
+        setTimeout(() => {
             currentCard.classList.remove('exit', 'next');
         }, 800);
         currentIndex = nextIndex;
     };
     // Autoplay interval (every 3.5 seconds)
-    var autoplayInterval = setInterval(advanceCard, 3500);
+    const autoplayInterval = setInterval(advanceCard, 3500);
     // Tap/click to manually advance (autoplay continues — remove line below to stop autoplay)
-    deck.addEventListener('click', function () {
+    deck.addEventListener('click', () => {
         advanceCard();
         // clearInterval(autoplayInterval); // Uncomment to stop autoplay on manual tap
     });
 });
-function toggleDropdown(header) {
-    var section = header.closest(".survey-section");
-    if (!section)
-        return;
-    var content = header.nextElementSibling;
-    if (!content)
-        return;
-    var isOpen = content.classList.contains("open");
-    // Close all
-    section.querySelectorAll(".dropdown-content").forEach(function (c) {
-        c.classList.remove("open");
-        c.style.maxHeight = "0";
+//data.html ts 
+//contact footer
+// main.ts
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbysJ3ebGgKWlgxjeuG4yU8eSAIhR7k2gjN7nbEIwqf6oQw5B-fGo25_YE2G-8ooTLc/exec";
+const form = document.getElementById("contactForm");
+const statusEl = document.getElementById("formStatus");
+form.addEventListener("submit", (e) => __awaiter(void 0, void 0, void 0, function* () {
+    var _a, _b, _c;
+    e.preventDefault();
+    statusEl.textContent = "Sending...";
+    const body = new URLSearchParams({
+        name: ((_a = form.elements.namedItem("name")) === null || _a === void 0 ? void 0 : _a.value) || "",
+        email: ((_b = form.elements.namedItem("email")) === null || _b === void 0 ? void 0 : _b.value) || "",
+        message: ((_c = form.elements.namedItem("message")) === null || _c === void 0 ? void 0 : _c.value) || ""
     });
-    section.querySelectorAll(".dropdown-header span").forEach(function (s) { return (s.textContent = "▼"); });
-    // Open clicked
-    if (!isOpen) {
-        content.classList.add("open");
-        content.style.maxHeight = content.scrollHeight + "px";
-        var icon = header.querySelector("span");
-        if (icon)
-            icon.textContent = "▲";
+    try {
+        // no-cors avoids browser CORS blocks; response is opaque
+        yield fetch(ENDPOINT, { method: "POST", body, mode: "no-cors" });
+        statusEl.textContent = "✅ Thanks! Your message was received.";
+        form.reset();
     }
-}
-document.addEventListener("DOMContentLoaded", function () {
-    var headers = document.querySelectorAll(".survey-section .dropdown-header");
-    headers.forEach(function (header) {
-        header.addEventListener("click", function () { return toggleDropdown(header); });
-    });
-});
+    catch (_d) {
+        statusEl.textContent = "⚠️ Network error.";
+    }
+}));

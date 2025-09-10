@@ -38,119 +38,143 @@
       </button>
     </nav>
   </header>
- <section class="survey-banner">
-  <div class="survey-content">
-    <h2>
-      Shape the Future of Academia: <br />
-      <span >Your Voice Matters – Take the Survey</span>
-    </h2>
-    <p class="subtitle" style="color: gold;">You didn’t come this far to stop!</p>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <div class="survey-buttons">
-      <a href="#" class="survey-btn">🎓 Student Survey</a>
-      <a href="#" class="survey-btn">🧑‍🏫 Faculty Survey</a>
-      <a href="#" class="survey-btn">🗂 Administrator Survey</a>
-      <a href="#" class="survey-btn">📲 Survey QR Codes</a>
+<main id="main-content">
+  <!-- SURVEY BANNER -->
+  <section class="survey-banner" aria-labelledby="survey-banner-title" role="region">
+    <div class="survey-content">
+      <h2 id="survey-banner-title">
+        Shape the Future of Academia: <br />
+        <span>Your Voice Matters – Take the Survey</span>
+      </h2>
+
+      <!-- Avoid color-only meaning; keep class and add role="note" -->
+      <p class="subtitle" role="note">You didn’t come this far to stop!</p>
+
+      <div class="survey-buttons" role="group" aria-label="Survey links">
+        <!-- Use real destinations if available; otherwise add aria-disabled -->
+        <a href="#student-survey" class="survey-btn" role="button" aria-label="Open the Student Survey">🎓 Student Survey</a>
+        <a href="#faculty-survey" class="survey-btn" role="button" aria-label="Open the Faculty Survey">🧑‍🏫 Faculty Survey</a>
+        <a href="#admin-survey" class="survey-btn" role="button" aria-label="Open the Administrator Survey">🗂 Administrator Survey</a>
+        <a href="#survey-qr-codes" class="survey-btn" role="button" aria-label="Open Survey QR Codes">📲 Survey QR Codes</a>
+      </div>
+
+      <p class="qr-note" role="note">Share QR codes with your friends!</p>
     </div>
+  </section>
 
-    <p class="qr-note" style="color: gold;">Share QR codes with your friends!</p>
-  </div>
-</section>
-<section class="innovation-section">
-  <div class="innovation-content">
-    <h2 style="color: white;">Revolutionizing Academia!</h2>
-    <h3>
-      Harnessing Technology, Common Sense, and Collaborative Spirit for a Brighter Future!
-    </h3>
-    <p style="color: white;">
-      We equip institutions to innovate for student success, faculty engagement, and institutional effectiveness by maximizing the learning sweet spot with advanced technology.
-    </p>
+  <!-- INNOVATION SECTION -->
+  <section class="innovation-section" aria-labelledby="innovation-title" role="region">
+    <div class="innovation-content">
+      <h2 id="innovation-title">Revolutionizing Academia!</h2>
+      <h3>Harnessing Technology, Common Sense, and Collaborative Spirit for a Brighter Future!</h3>
+      <p>
+        We equip institutions to innovate for student success, faculty engagement, and institutional effectiveness by maximizing the learning sweet spot with advanced technology.
+      </p>
 
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h4>📈 Maximize Technology Benefits</h4>
-        <p>Collaborate to enhance learning environments and success.</p>
-      </div>
-      <div class="feature-card">
-        <h4>💡 Interactive Learning</h4>
-        <p>Create interactive learning experiences that provide students instant feedback!</p>
-      </div>
-      <div class="feature-card">
-        <h4>🏛 Institutional Viability</h4>
-        <p>Improved retention, academic continuity, and business continuity.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="edu-section">
-  <div class="edu-container">
-    <div class="edu-block">
-      <div class="edu-text">
-        <h2>Transforming Academia with Technology</h2>
-        <p>
-          We're excited to harness technology to build vibrant learning environments that support student success! We incorporate interactive elements with instant feedback, track student success, and allow students to learn at their own pace and schedule.
-        </p>
-      </div>
-      <div class="deck-stack" id="deck">
-  <img src="image/classroom.png" alt="Card 1" class="deck-card active">
-  <img src="image/clasromm2.png" alt="Card 2" class="deck-card next">
-  <img src="image/classroom3.png" alt="Card 3" class="deck-card">
-</div>
-    </div>
-
-    <div class="edu-block reverse">
-      <div class="edu-images">
-        <img class="image-3" src="image/learning.png" alt="Faculty training session">
-      </div>
-      <div class="edu-text">
-        <h2>Empowering Educational Transformation</h2>
-        <p>
-          Our mission is to collaborate with academic institutions, faculty, and students to enhance learning experiences, help develop the skills to become lifelong learners, and maximize the impact of the institution’s existing technological tools on student success.
-        </p>
-        <p>
-          We guide institutions in utilizing technology for enhanced student success and faculty engagement, creating dynamic and supportive learning environments that support the academic mission.
-        </p>
+      <div class="feature-grid" role="list">
+        <div class="feature-card" role="listitem">
+          <h4>📈 Maximize Technology Benefits</h4>
+          <p>Collaborate to enhance learning environments and success.</p>
+        </div>
+        <div class="feature-card" role="listitem">
+          <h4>💡 Interactive Learning</h4>
+          <p>Create interactive learning experiences that provide students instant feedback!</p>
+        </div>
+        <div class="feature-card" role="listitem">
+          <h4>🏛 Institutional Viability</h4>
+          <p>Improved retention, academic continuity, and business continuity.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="success-section">
-  <div class="success-container">
-    <h2>Empower Academic Success</h2>
-    <p class="subtitle">
-      Transform the academic learning environment using technology to enhance learning opportunities. Promote student and faculty success by leveraging technology to allow faculty to better know and understand where their students are in the learning process.
-    </p>
-    <p class="subtitle">
-      Use technology to support numerous learning styles so that more students will be able to engage with faculty successfully.
-    </p>
+  </section>
 
-    <div class="success-grid">
-      <div class="success-card">
-        <img src="image1.jpg" alt="Online course" />
-        <h4>A Face to Face Component</h4>
-        <p>
-          A face-to-face online course component for the  environment can effectively support classroom activities with interactive tools that help students achieve academic goals.
-        </p>
+  <!-- EDU SECTION -->
+  <section class="edu-section" aria-labelledby="edu-title" role="region">
+    <div class="edu-container">
+      <div class="edu-block">
+        <div class="edu-text">
+          <h2 id="edu-title">Transforming Academia with Technology</h2>
+          <p>
+            We're excited to harness technology to build vibrant learning environments that support student success! We incorporate interactive elements with instant feedback, track student success, and allow students to learn at their own pace and schedule.
+          </p>
+        </div>
+
+        <!-- Carousel shell: keep classes; add accessible structure -->
+        <div class="deck-stack" id="deck" role="region" aria-roledescription="carousel" aria-label="Classroom images" aria-live="polite">
+          <!-- Include meaningful alt text; indicate current slide with aria-current -->
+          <img src="image/classroom.png" alt="Modern classroom with students collaborating" class="deck-card active" aria-current="true">
+          <img src="image/clasromm2.png" alt="Teacher leading an interactive lesson" class="deck-card next" aria-hidden="true">
+          <img src="image/classroom3.png" alt="Computer lab with students receiving instant feedback" class="deck-card" aria-hidden="true">
+
+          <!-- Keyboard-operable controls tied to the carousel -->
+          <div class="visually-hidden" id="deck-instructions">
+            Use Next and Previous to change slides. The current slide is announced.
+          </div>
+          <div class="deck-controls" role="group" aria-label="Carousel controls">
+            <button type="button" class="deck-prev" aria-controls="deck" aria-describedby="deck-instructions">Previous</button>
+            <button type="button" class="deck-next" aria-controls="deck" aria-describedby="deck-instructions">Next</button>
+          </div>
+        </div>
       </div>
 
-      <div class="success-card">
-        <img src="image2.jpg" alt="Students studying" />
-        <h4>24/7 Learning Environments</h4>
-        <p>
-          Designing dynamic, accessible spaces open 24/7 helps meet varied student schedules and empowers them to succeed.
-        </p>
-      </div>
-
-      <div class="success-card">
-        <img class="image-3" src="image3.jpg" alt="Collaborative students" />
-        <h4>Collaborative Growth</h4>
-        <p>
-          Providing collaborative spaces helps students deeply understand material and make the most of their learning time.
-        </p>
+      <div class="edu-block reverse">
+        <div class="edu-images">
+          <img class="image-3" src="image/learning.png" alt="Faculty training session using learning analytics">
+        </div>
+        <div class="edu-text">
+          <h2>Empowering Educational Transformation</h2>
+          <p>
+            Our mission is to collaborate with academic institutions, faculty, and students to enhance learning experiences, help develop the skills to become lifelong learners, and maximize the impact of the institution’s existing technological tools on student success.
+          </p>
+          <p>
+            We guide institutions in utilizing technology for enhanced student success and faculty engagement, creating dynamic and supportive learning environments that support the academic mission.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- SUCCESS SECTION -->
+  <section class="success-section" aria-labelledby="success-title" role="region">
+    <div class="success-container">
+      <h2 id="success-title">Empower Academic Success</h2>
+      <p class="subtitle">
+        Transform the academic learning environment using technology to enhance learning opportunities. Promote student and faculty success by leveraging technology to allow faculty to better know and understand where their students are in the learning process.
+      </p>
+      <p class="subtitle">
+        Use technology to support numerous learning styles so that more students will be able to engage with faculty successfully.
+      </p>
+
+      <div class="success-grid" role="list">
+        <div class="success-card" role="listitem">
+          <img src="image1.jpg" alt="Student and instructor connecting through a blended course environment" />
+          <h4>A Face to Face Component</h4>
+          <p>
+            A face-to-face online course component for the environment can effectively support classroom activities with interactive tools that help students achieve academic goals.
+          </p>
+        </div>
+
+        <div class="success-card" role="listitem">
+          <img src="image2.jpg" alt="Students studying at all hours in a flexible space" />
+          <h4>24/7 Learning Environments</h4>
+          <p>
+            Designing dynamic, accessible spaces open 24/7 helps meet varied student schedules and empowers them to succeed.
+          </p>
+        </div>
+
+        <div class="success-card" role="listitem">
+          <img class="image-3" src="image3.jpg" alt="Group of students collaborating on a project" />
+          <h4>Collaborative Growth</h4>
+          <p>
+            Providing collaborative spaces helps students deeply understand material and make the most of their learning time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 <section class="contact-section">
   <div class="contact-container">
     <div class="contact-info">
@@ -175,18 +199,19 @@
 </div>
     </div>
 
-    <form class="contact-form">
-      <label>Your First Name</label>
-      <input type="text" placeholder="Enter your first name" />
+   <form class="contact-form" id="contactForm">
+  <label>Your First Name</label>
+  <input type="text" name="name" placeholder="Enter your first name" />
 
-      <label>Your Email Address*</label>
-      <input type="email" placeholder="Enter your email address" required />
+  <label>Your Email Address*</label>
+  <input type="email" name="email" placeholder="Enter your email address" required />
 
-      <label>Your Message*</label>
-      <textarea rows="4" placeholder="Type your message here" required></textarea>
+  <label>Your Message*</label>
+  <textarea name="message" rows="4" placeholder="Type your message here" required></textarea>
 
-      <button type="submit">Submit Your Inquiry</button>
-    </form>
+  <button type="submit">Submit Your Inquiry</button>
+  <p id="formStatus" style="margin-top:8px;"></p>
+</form>
   </div>
 </section>
 <footer class="site-footer">
@@ -213,6 +238,7 @@
       <button>Submit your information here.</button>
     </div>
   </div>
+  <div class="logo"><img src=""> </div>
 </footer>
 
 

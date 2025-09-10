@@ -125,6 +125,40 @@ ul {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  z-index: 10000;
+  background: #fff;
+  outline: 2px solid;
+  border-radius: 0.25rem;
+}
+
 @media (max-width: 768px) {
   .grid-2,
   .grid-3,
@@ -811,6 +845,7 @@ ul {
     max-width: 90%;
   }
 }
+/* contact */
 .contact-section {
   background: #f9f9f9;
   padding: 80px 20px;
@@ -893,6 +928,7 @@ ul {
   background: #1e2656;
 }
 
+/* deck */
 .deck-stack {
   position: relative;
   width: min(90vw, 320px);
@@ -963,6 +999,20 @@ ul {
     transform: translateX(-100%) rotate(-4deg);
   }
 }
+/* === FIX: remove vertical bar in survey heading === */
+.survey-banner .survey-content h2,
+.survey-banner .survey-content h2::before,
+.survey-banner .survey-content h2::after {
+  border-left: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding-left: 0 !important;
+}
+
+.survey-banner .survey-content {
+  border-left: 0 !important;
+}
+
 :root {
   --primary-blue: #3f66e0;
   --blue-bg: #f8fbff;
